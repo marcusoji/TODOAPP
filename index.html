@@ -122,7 +122,15 @@ id="saveEdit">Save Changes</button>
     </footer>
 
     <script src="index.js"></script>
-            
+           <script>
+          if ("serviceworker" in navigator)  {
+              navigator.serviceWorker
+                    .register("/service-worker.js")
+                          .then(() => console.log("Service Worker registered"))
+                                .catch((err) => console.log("SW registration failed:", err));
+                                  }
+                                  </script>  
 </body>
 </html>
+
 
