@@ -1,0 +1,129 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nex-Task | Modern To-Do App</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+   <div class="container">
+        <header>
+            <h1 class="app-title">Nex-Task</h1>
+            <div class="theme-toggle" id="themeToggle">
+                <i class="fas fa-sun"></i>
+                <i class="fas fa-moon"></i>
+                <div class="theme-toggle-ball"></div>
+            </div>
+        </header>
+
+        <div class="stats">
+            <div class="stat-card">
+                <h3>Total Tasks</h3>
+                <p id="totalTasks">0</p>
+            </div>
+            <div class="stat-card">
+                <h3>Completed</h3>
+                <p id="completedTasks">0</p>
+            </div>
+            <div class="stat-card">
+                <h3>Pending</h3>
+                <p id="pendingTasks">0</p>
+            </div>
+        </div>
+
+        <div class="input-area">
+            <div class="input-group">
+                <input type="text" id="taskInput" placeholder="Enter a new task...">
+                <select id="categorySelect">
+                    <option value="personal">Personal</option>
+                    <option value="work">Work</option>
+                    <option value="shopping">Shopping</option>
+                    <option value="health">Health</option>
+                </select>
+              <button class="btn-add" id="addTaskBtn">
+                    <i class="fas fa-plus"></i> Add
+                </button>
+            </div>
+        </div>
+
+        <!-- Delete All Button -->
+        <div class="delete-all-container">
+            <button class="btn-delete-all" id="deleteAllBtn" disabled>
+                <i class="fas fa-trash"></i> Delete All Tasks
+            </button>
+        </div>
+
+        <div class="filters">
+            <button class="filter-btn active" data-filter="all">All Tasks</button>
+            <button class="filter-btn" data-
+
+filter="active">Active</button>
+            <button class="filter-btn" data-filter="completed">Completed</button>
+        </div>
+
+        <div class="task-list" id="taskList">
+            <!-- Sample tasks will be added by JavaScript -->
+        </div>
+    </div>
+
+    <!-- Edit Task Modal -->
+    <div class="modal" id="editTaskModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">Edit Task</h2>
+                <button class="close-btn" id="closeModal">&times;</button>
+            </div>
+            <div class="form-group">
+                <label for="editTaskTitle">Task 
+
+Title</label>
+                <input type="text" id="editTaskTitle" placeholder="Enter task title">
+            </div>
+            <div class="form-group">
+                <label for="editTaskCategory">Category</label>
+                <select id="editTaskCategory">
+                    <option value="personal">Personal</option>
+                    <option value="work">Work</option>
+                    <option value="shopping">Shopping</option>
+                    <option value="health">Health</option>
+                </select>
+            </div>
+            <div class="form-actions">
+                <button class="btn-cancel" id="cancelEdit">Cancel</button>
+                <button class="btn-save" 
+
+id="saveEdit">Save Changes</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Delete All Confirmation Modal -->
+    <div class="modal" id="deleteAllModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">Confirm Delete</h2>
+                <button class="close-btn" id="closeDeleteAllModal">&times;</button>
+            </div>
+            <div class="modal-message">
+                <p>Are you sure you want to delete all tasks? This action cannot be undone.</p>
+            </div>
+            <div class="form-actions">
+                <button class="btn-cancel" id="cancelDeleteAll">Cancel</button>
+
+                <button class="btn-confirm-delete" id="confirmDeleteAll">Delete All</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2025 Nex-Task - A-to-do-list-application</p>
+        <P>Oji Marcus Ifeanyichukwu</P>
+    </footer>
+
+    <script src="index.js"></script>
+            
+</body>
+</html>
