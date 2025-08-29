@@ -1,7 +1,7 @@
 self.addEventListener("install", event => {
       event.waitUntil(
             caches.open("todo-cache").then(cache => {
-                      return cache.addAll(["/", "/index.html", "/style.css", "/app.js"]);
+                      return cache.addAll(["/", "/index.html", "/index.css", "/index.js"]);
             })
       );
 });
